@@ -1,0 +1,21 @@
+package sportsmanagement;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import java.util.Arrays;
+import java.util.List;
+ 
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+ 
+@Controller
+public class MvcController {
+     
+    @RequestMapping("/")
+    public String home() {
+        System.out.println("Going home...");
+        return "index";
+    }
+    
+    
+}
