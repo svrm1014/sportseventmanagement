@@ -28,7 +28,7 @@ color:white;
 
 </style>
 
-<meta charset="ISO-8859-1"> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Sports Event Management System</title>
 </head>
 <body>

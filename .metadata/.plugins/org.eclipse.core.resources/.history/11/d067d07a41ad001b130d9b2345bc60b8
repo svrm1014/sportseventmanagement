@@ -1,0 +1,10 @@
+package sportsmanagement.authentication;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import sportsmanagement.authentication.AddSportsDeatails;
+
+
+public interface AddSportsDetailsRepository extends JpaRepository<AddSportsDeatails, String> {
+
+}

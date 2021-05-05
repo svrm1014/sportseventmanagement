@@ -1,0 +1,65 @@
+package sportsmanagement.authentication;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+
+@Entity
+public class AddSportsDeatails {
+	
+	private String userName;
+	private String collegeName;
+	private String Location;
+	private Date date;
+	private int firstPrice;
+	private int secondPrice;
+	private int thirdPrice;
+	
+	
+	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getCollegeName() {
+		return collegeName;
+	}
+	public void setCollegeName(String collegeName) {
+		this.collegeName = collegeName;
+	}
+	public String getLocation() {
+		return Location;
+	}
+	public void setLocation(String location) {
+		Location = location;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public int getFirstPrice() {
+		return firstPrice;
+	}
+	public void setFirstPrice(int firstPrice) {
+		this.firstPrice = firstPrice;
+	}
+	public int getSecondPrice() {
+		return secondPrice;
+	}
+	public void setSecondPrice(int secondPrice) {
+		this.secondPrice = secondPrice;
+	}
+	public int getThirdPrice() {
+		return thirdPrice;
+	}
+	public void setThirdPrice(int thirdPrice) {
+		this.thirdPrice = thirdPrice;
+	}
+
+	
+
+}

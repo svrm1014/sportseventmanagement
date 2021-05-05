@@ -1,0 +1,5 @@
+package sportsmanagement.authentication;
+
+public interface AddSportsDetailsRepository {
+
+}

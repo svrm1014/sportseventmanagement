@@ -1,0 +1,81 @@
+package sportsmanagement.authentication;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class AddSportsDeatails {
+	
+	private String sportname;
+	private String collegename;
+	private String location;
+	private Date date;
+	//private int firstprice;
+	private int secondprice;
+	private int thirdprice;
+	
+	public AddSportsDeatails() {
+		
+	}
+	
+	@Id
+	@GeneratedValue
+	public String getSportname() {
+		return sportname;
+	}
+
+
+	public void setSportname(String sportname) {
+		this.sportname = sportname;
+	}
+
+	public String getCollegename() {
+		return collegename;
+	}
+
+	public void setCollegename(String collegename) {
+		this.collegename = collegename;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public int getFirstprice() { return firstprice; }
+
+	public void setFirstprice(int firstprice) { this.firstprice = firstprice; }
+
+	public int getSecondPrice() {
+		return secondprice;
+	}
+
+	public void setSecondPrice(int secondprice) {
+		this.secondprice = secondprice;
+	}
+
+	public int getThirdPrice() {
+		return thirdprice;
+	}
+
+	public void setThirdPrice(int thirdprice) {
+		this.thirdprice = thirdprice;
+	}
+
+	
+
+}

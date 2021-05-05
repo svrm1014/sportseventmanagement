@@ -1,0 +1,14 @@
+package sportsmanagement.authentication;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+
+@Entity
+public class AddSportsDeatails {
+	private String userName;
+	private String collegeName;
+	private String Location;
+	private Date date;
+
+}
