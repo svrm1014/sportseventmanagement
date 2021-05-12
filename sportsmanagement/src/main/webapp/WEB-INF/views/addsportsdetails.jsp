@@ -34,6 +34,7 @@ form {
 }
 </style>
 
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Sports Event Management System</title>
 </head>
@@ -41,7 +42,7 @@ form {
 	<div class="title">Sports Event Management System</div>
 	<div class="menu">
 		<ul>
-			<li><a href="/homepage">HomePage</a></li>
+			<li><a href="/">HomePage</a></li>
 			<li><a href="/addsportsdetails">Add Sports Details</a></li>
 			<li><a href="/viewsports">View Sports</a></li>
 			<li><a href="/admin">Logout</a></li>
@@ -58,6 +59,7 @@ form {
 		        
 		<form:form action="sportsdetails" method="post"
 			modelAttribute="sportsdetailsKey">
+			
             <form:label path="sportname">Sport Name:</form:label>
             <form:input path="sportname" />
 			<br />
@@ -70,8 +72,8 @@ form {
             <form:input path="location" />
 			<br />      
  			<br />
-            <form:label path="date" placeholder="dd/mm/yyyy">Date:</form:label>
-            <form:input path="date" />
+            <form:label path="date" placeholder="MM/DD/YYYY" >Date:</form:label>
+            <form:input type ="date" path="date" class="date" name="date" pattern="MM/DD/YYYY" />
 			<br />
              <br />
            <form:label path="firstprice">1stPrice:</form:label>
@@ -85,9 +87,10 @@ form {
             <form:label path="thirdprice">3rdPrice:</form:label>
            <form:input path="thirdprice" />
 			<br />
-                 <br />
+             <br />
             <form:button>Submit</form:button>
         </form:form>
+		
 	</div>
 
 </body>

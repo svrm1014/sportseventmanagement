@@ -38,7 +38,7 @@ color:white;
     <li><a href="/homepage">HomePage</a></li>
     <li><a href="/addsportsdetails">Add Sports Details</a></li>
     <li><a href="/viewsports">View Sports</a></li>
-    <li><a href="/admin">Logout</a></li>
+    <li><a href="/">Logout</a></li>
     
     </ul>
  </div>  

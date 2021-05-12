@@ -35,7 +35,7 @@ color:white;
     <div class="title">Sports Event Management System</div>
     <div class="menu">
     <ul>
-    <li><a href="/homepage">HomePage</a></li>
+    <li><a href="/">HomePage</a></li>
     <li><a href="/admin">Admin</a></li>
     
     </ul>

@@ -1,0 +1,5 @@
+package sportsmanagement.repository;
+
+public interface UserRegistrationRepository {
+
+}

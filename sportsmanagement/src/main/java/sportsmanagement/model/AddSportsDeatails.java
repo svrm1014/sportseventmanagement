@@ -4,7 +4,10 @@ import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class AddSportsDeatails {
@@ -14,17 +17,14 @@ public class AddSportsDeatails {
 	private String sportname;
 	private String collegename;
 	private String location;
+	@DateTimeFormat(pattern = "MM/DD/YYYY")
 	private Date date;
 	private int firstprice;
 	private int secondprice;
 	private int thirdprice;
-
-	public AddSportsDeatails() {
-		
-	}
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	public int getId() {
 		return id;
 	}
@@ -63,9 +63,12 @@ public class AddSportsDeatails {
 		return date;
 	}
 
+	public void setDate(String inDate) {
+		this.date = Date.valueOf(inDate);
+	}
 	public void setDate(Date date) {
 		this.date = date;
-	}
+		}
 
 	public int getFirstprice() { return firstprice; }
 
@@ -86,7 +89,10 @@ public class AddSportsDeatails {
 	public void setThirdprice(int thirdprice) {
 		this.thirdprice = thirdprice;
 	}
-
 	
-
+	@Override
+	public String toString() {
+		return collegename + ": " + date + ": " + firstprice + ": " + sportname;
+		
+	}
 }

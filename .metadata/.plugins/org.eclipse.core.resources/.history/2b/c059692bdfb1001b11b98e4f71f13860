@@ -1,0 +1,5 @@
+package sportsmanagement.model;
+
+public class UserRegistrationForm {
+
+}
