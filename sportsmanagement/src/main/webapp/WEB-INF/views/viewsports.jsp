@@ -44,6 +44,8 @@ li a {
 	</div>
 	<div align="left">
 		<h2>View Sports</h2>
+		<hr>
+		<a href="/registeredusers">RegisteredUsers</a>
 	</div>
 	<div align="center">
     <h1>SportsDetails</h1>

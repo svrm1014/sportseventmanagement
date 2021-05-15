@@ -3,6 +3,8 @@ package sportsmanagement.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import sportsmanagement.model.AddSportsDeatails;
@@ -14,6 +16,7 @@ import sportsmanagement.service.UserRegistrationService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.PostMapping;
 
@@ -101,7 +104,38 @@ public class MvcController {
     public String userRegistrationSave(@ModelAttribute("formKey") UserRegistrationForm form) {
     	System.out.println("Register the User");
     	userregistrationservice.save(form);
-    	return "registrationform";
+    	return "user";
     }
+    
+    @GetMapping(value="/registeredusers")
+    public String registeredPeople(Model model) {
+    	System.out.println("Registered People");
+    	List<UserRegistrationForm> users = userregistrationservice.listAll();
+    	model.addAttribute("usersKey", users);
+    	return "registeredusers";
+    }
+    
+    @Autowired
+    private JavaMailSender mailSender;
+    
+    @GetMapping(value="/sendemail")
+    public String sendEmail() {
+        
+    System.out.println("Static details email service");	
+    String from = "bbksvrm@gmail.com";
+    String to = "madhuriit92@gmail.com";
+     
+    SimpleMailMessage message = new SimpleMailMessage();
+     
+    message.setFrom(from);
+    message.setTo(to);
+    message.setSubject("Registration Successful..");
+    message.setText("Hello, your registration is accepted");
+     
+    mailSender.send(message);
+    return "index";
+    }
+    
+    
     
 }

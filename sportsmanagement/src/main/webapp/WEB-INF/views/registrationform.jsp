@@ -67,8 +67,8 @@ form {
             <form:input path="mobile" />
             <br />    
 			<br />            
-            <form:label path="dob" placeholder="MM/DD/YYYY" >Date Of Birth:</form:label>
-            <form:input type ="date" path="dob" class="dob" name="dob" pattern="MM/DD/YYYY" />
+            <form:label path="dob" >Date Of Birth:</form:label>
+            <form:input type ="date" path="dob" class="date" name="dob" />
 			<br />
 			<br />
             <form:label path="gender">Gender:</form:label>

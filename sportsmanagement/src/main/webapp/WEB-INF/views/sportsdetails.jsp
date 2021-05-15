@@ -51,6 +51,7 @@ form {
 	</div>
 	<div align="left">
 		<h2>Sports</h2>
+		<a href="/registeredpeople">RegisteredPeople</a>
 	</div>
 	
 
